@@ -5,7 +5,7 @@ from aiogram.types import BotCommand
 from aiogram_dialog import setup_dialogs
 from aiogram.fsm.storage.memory import MemoryStorage
 
-from config import BOT_TOKEN
+from config import TELEGRAM_BOT_TOKEN
 from handlers import start, tasks, categories
 from dialogs.dialogs import (
     create_task_dialog,
@@ -16,7 +16,7 @@ from dialogs.dialogs import (
 )
 
 storage = MemoryStorage()
-bot = Bot(token=BOT_TOKEN)
+bot = Bot(token=TELEGRAM_BOT_TOKEN)
 dp = Dispatcher(storage=storage)
 
 start.register_handlers(dp)
