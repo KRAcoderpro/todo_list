@@ -19,7 +19,7 @@ def task_inline_keyboard(task_id: str, is_finished: bool):
         )
         kb.add(
             InlineKeyboardButton(
-                text="✅ Завершить", callback_data=f"finish_task_{task_id}"
+                text="🔚 Завершить", callback_data=f"finish_task_{task_id}"
             )
         )
 

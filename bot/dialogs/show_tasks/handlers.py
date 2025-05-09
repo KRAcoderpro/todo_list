@@ -23,9 +23,9 @@ def _format_task(task: dict) -> str:
     if due_date := task['due_date']:
         result += f"⏰ {_format_date(due_date)}{new_line_character}"
     if task.get('finished'):
-        result += f"✅ Выполнено"
+        result += f"🔚 Завершена"
     else:
-        result += f"🔨 В процессе"
+        result += f"🕐 В процессе"
 
     return result
 

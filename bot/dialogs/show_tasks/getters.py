@@ -6,8 +6,8 @@ async def get_show_task_types(**kwargs):
     return {
         "task_types": [
             {"id": "all", "name": "📅 Все"},
-            {"id": "finished", "name": "✅ Завершенные"},
-            {"id": "in_progress", "name": "🔨 В процессе"},
+            {"id": "finished", "name": "🔚 Завершенные"},
+            {"id": "in_progress", "name": "🕐 В процессе"},
             {"id": "by_category", "name": "🏷 По категории"},
         ]
     }

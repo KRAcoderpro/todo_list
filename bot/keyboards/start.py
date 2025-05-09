@@ -10,7 +10,9 @@ def main_inline_kb():
             [
                 InlineKeyboardButton(
                     text="📅 Мои задачи", callback_data="my_tasks"
-                ),
+                )
+            ],
+            [
                 InlineKeyboardButton(
                     text="🗂 Мои категории", callback_data="my_categories"
                 )
@@ -19,6 +21,8 @@ def main_inline_kb():
                 InlineKeyboardButton(
                     text="📝 Добавить задачу", callback_data="add_task"
                 ),
+            ],
+            [
                 InlineKeyboardButton(
                     text="🏷 Добавить категорию", callback_data="add_category"
                 )
