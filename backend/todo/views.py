@@ -12,13 +12,12 @@ class RegisterTelegramUserView(APIView):
 
     def post(self, request):
         tg_id = request.data.get("telegram_id")
-        username = request.data.get("username") or f"user_{tg_id}"
 
         if tg_id is None:
             return Response({"error": "telegram_id is required"}, status=400)
 
         user, created = User.objects.get_or_create(
-            telegram_id=tg_id, defaults={"username": username}
+            telegram_id=tg_id
         )
         return Response({"user_id": user.id}, status=201 if created else 200)
 
