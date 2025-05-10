@@ -118,13 +118,12 @@ async def update_task(
         headers = {"X-Telegram-ID": str(telegram_id)}
         data = {
             "category_id": category_id,
-            "finished": finished
+            "finished": finished,
+            "due_date": due_date
         }
 
         if title is not None:
             data.update({"title": title})
-        if due_date is not None:
-            data.update({"due_date": due_date})
 
         async with session.patch(
                 f"{API_URL}/tasks/{task_id}/", json=data, headers=headers
